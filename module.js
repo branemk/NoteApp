@@ -24,7 +24,7 @@ var Notes = (function () {
     function showNotes() {
         $("#notes").empty();
 
-        for (var i = 0; i < notes.length; i++) {
+        for (var i = notes.length-1; i >= 0; i--) {
             var notediv = $("<div>").addClass("note");
 
             var noteSpan = $("<span>", {
