@@ -1,84 +1,174 @@
  body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Raleway', sans-serif;
-	font-size: 150%;
-	background-color: #CB6682;
-}
-
-h1 {
-	color: white;
-}
-
-#container {
-	min-height: 50vh;
-	max-width: 50vw;
-	padding: 2% 10%;
-	background-color: white;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-#input {
-	width: 100%;
-	border: none;
-	border-bottom: 1px pink solid;
-	color: gray;
-	outline-color: pink;
-	font-family: 'Raleway', sans-serif;
-	font-size: 120%;
-}
-
-i {
-	color: #CB6682;
-}
-
-i:hover {
-	cursor: pointer;
-}
-
-.completed {
-	text-decoration: line-through;
-}
-
-.note {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2% 0 2% 0;
-	border-bottom: 1px pink solid;
-}
-
-.notespan {
-	color: gray;
-	outline-color: #CB6682;
-	padding: 0 2em 0 2em;
-	white-space: pre-line;
-	max-width: 20em;
-	word-wrap: break-word;
-}
-
-.notespan:hover {
-	cursor: pointer;
-}
-
-.checkbox:hover {
-	cursor: pointer;
-}
-
-.checkbox {
-	width: 18px;
-	height: 19px;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_cb1a8563c56c1ea66ccde57f641986dd.png);
-	background-position: 0 0;
-}
-
-.checkbox:checked {
-	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_cb1a8563c56c1ea66ccde57f641986dd.png);
-	background-position: 0 -19px;
-	outline: none;
-}
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	flex-direction: column;
+ 	font-family: 'Raleway', sans-serif;
+ 	font-size: 150%;
+ 	background-color: #CB6682;
+ }
+ 
+ h1 {
+ 	color: white;
+ }
+ 
+ #container {
+ 	min-height: 50vh;
+ 	max-width: 50vw;
+ 	padding: 2% 10%;
+ 	background-color: white;
+ 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ }
+ 
+ #input {
+ 	width: 100%;
+ 	border: none;
+ 	border-bottom: 1px pink solid;
+ 	color: gray;
+ 	outline-color: pink;
+ 	font-family: 'Raleway', sans-serif;
+ 	font-size: 120%;
+ }
+ 
+ i {
+ 	color: #CB6682;
+ }
+ 
+ i:hover {
+ 	cursor: pointer;
+ }
+ 
+ .completed {
+ 	text-decoration: line-through;
+ }
+ 
+ #buttons-container {
+ 	padding: 5% 0%;
+ 	display: flex;
+ 	align-content: flex-start;
+ 	color: gray;
+ 	font-family: 'Raleway', sans-serif;
+ 	font-size: 90%;
+ 	/*justify-content: flex-start;*/
+ }
+ 
+ #selectAllLabel {
+ 	padding: 0% 0 0 2%;
+ }
+ 
+ #buttons-All-Active-Completed-Container {
+ 	margin-left: auto;
+ 	display: flex;
+ 	align-content: flex-end;
+ 	color: gray;
+ 	font-family: 'Raleway', sans-serif;
+ }
+ 
+ #ShowActive {
+ 	padding: 0 5%;
+ }
+ 
+ .activeButton {
+ 	border-bottom: 2px #CB6682 solid;
+ }
+ 
+ .note {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	padding: 2% 0 2% 0;
+ 	border-bottom: 1px pink solid;
+ }
+ 
+ .notespan {
+ 	color: gray;
+ 	outline-color: #CB6682;
+ 	padding: 0 2em 0 2em;
+ 	white-space: pre-line;
+ 	max-width: 15em;
+ 	word-wrap: break-word;
+ }
+ 
+ .notespan:hover {
+ 	cursor: pointer;
+ }
+ 
+ .checkbox:hover {
+ 	cursor: pointer;
+ }
+ 
+ .checkbox,
+ #selectAll {
+ 	width: 18px;
+ 	height: 19px;
+ 	outline: none;
+ 	-webkit-appearance: none;
+ 	-moz-appearance: none;
+ 	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_cb1a8563c56c1ea66ccde57f641986dd.png);
+ 	background-position: 0 0;
+ }
+ 
+ .checkbox:checked,
+ #selectAll:checked {
+ 	background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_cb1a8563c56c1ea66ccde57f641986dd.png);
+ 	background-position: 0 -19px;
+ 	outline: none;
+ }
+ 
+ @media (min-width:320px) {
+ 	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+ 	.notespan {
+ 		padding: 0;
+ 		font-size: 70%;
+ 	}
+ 	#container {
+ 		max-width: 80vw;
+ 		padding: 2% 5%;
+ 	}
+ }
+ 
+ @media (min-width:480px) {
+ 	/* smartphones, Android phones, landscape iPhone */
+ 	.notespan {
+ 		font-size: 70%;
+ 	}
+ 	#container {
+ 		max-width: 80vw;
+ 		padding: 2% 5%;
+ 	}
+ }
+ 
+ @media (min-width:600px) {
+ 	/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+ 	.notespan {
+ 		font-size: 80%;
+ 		padding: 0 2em 0 2em;
+ 	}
+ 	#container {
+ 		max-width: 80vw;
+ 		padding: 2% 5%;
+ 	}
+ }
+ 
+ @media (min-width:801px) {
+ 	/* tablet, landscape iPad, lo-res laptops ands desktops */
+ 	.notespan {
+ 		font-size: 90%;
+ 		padding: 0 2em 0 2em;
+ 	}
+ 	#container {
+ 		max-width: 50vw;
+ 		padding: 2% 10%;
+ 	}
+ }
+ 
+ @media (min-width:1025px) {
+ 	/* big landscape tablets, laptops, and desktops */
+ 	.notespan {
+ 		font-size: 100%;
+ 	}
+ }
+ 
+ @media (min-width:1281px) {
+ 	/* hi-res laptops and desktops */
+ }
