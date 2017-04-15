@@ -93,6 +93,13 @@
  	cursor: pointer;
  }
  
+ #selectAllLabel,
+ #showAll,
+ #ShowActive,
+ #ShowCompleted:hover {
+ 	cursor: pointer;
+ }
+ 
  .checkbox:hover {
  	cursor: pointer;
  }
